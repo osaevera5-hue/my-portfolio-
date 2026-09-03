@@ -88,6 +88,160 @@
     box-shadow:0 10px 25px rgba(59,130,246,.35);
 
 }
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificates {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.certificate-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Certificate Image */
+
+.certificate-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.05);
+}
+
+
+/* Overlay */
+
+.certificate-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+
+
+/* View Button */
+
+.certificate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #fff;
+    color: #222;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.certificate-btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+
+/* Content */
+
+.certificate-content {
+    padding: 22px;
+}
+
+.certificate-content h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.certificate-institution {
+    margin: 0 0 12px;
+    color: #777;
+    font-size: 14px;
+}
+
+.certificate-year {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    background: #f1c40f;
+    color: #222;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .certificates {
+        padding: 70px 0;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
      </style>
 
 </head>
@@ -635,7 +789,7 @@ WHY CHOOSE ME
 
             <div class="why-image">
 
-                <img src="assets/images/laptop.png"
+                <img src="images/code.jpg"
                      alt="Laptop">
 
             </div>
@@ -890,7 +1044,7 @@ PORTFOLIO
 
             <!-- Project 4 -->
 
-            <div class="portfolio-card design">
+            <!-- <div class="portfolio-card design">
 
                 <div class="portfolio-image">
 
@@ -939,12 +1093,12 @@ PORTFOLIO
 
         </div>
 
-    </div>
+    </div> -->
 
 </section>
     <!-- ========================= -->
 
-    <section id="portfolio" class="portfolio">
+    <!-- <section id="portfolio" class="portfolio">
 
         <div class="container">
 
@@ -958,7 +1112,189 @@ PORTFOLIO
 
         </div>
 
-    </section>
+    </section> -->
+
+    <!-- =========================
+     CERTIFICATES SECTION
+========================= -->
+
+<section class="certificates section" id="certificates">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>MY QUALIFICATIONS</span>
+
+            <h2>Certificates & Achievements</h2>
+
+            <p>
+                A collection of certificates and qualifications I've earned
+                through learning, training and professional development.
+            </p>
+
+        </div>
+
+        <!-- Certificate Grid -->
+
+        <div class="certificates-grid">
+
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img src="images/cert1.jpg"
+                         alt="Certificate">
+
+                    <div class="certificate-overlay">
+
+                        <a href="images/cert1.jpg"
+                           target="_blank"
+                           class="certificate-btn">
+                            <i class="fa-solid fa-eye"></i>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>Suceed in the Age Of AI</h3>
+
+                    <p class="certificate-institution">
+                        UDEMY
+                    </p>
+
+                    <span class="certificate-year">
+                        2025
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img src="images/cert2.jpg"
+                         alt="Certificate">
+
+                    <div class="certificate-overlay">
+
+                        <a href="images/cert2.jpg"
+                           target="_blank"
+                           class="certificate-btn">
+                            <i class="fa-solid fa-eye"></i>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>Google Gemini AI Bootcamp: AI Studio,Worspaces & Vertex AI </h3>
+
+                    <p class="certificate-institution">
+                        UDEMY
+                    </p>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img src="images/cert3.jpg"
+                         alt="Certificate">
+
+                    <div class="certificate-overlay">
+
+                        <a href="images/cert3.jpg"
+                           target="_blank"
+                           class="certificate-btn">
+                            <i class="fa-solid fa-eye"></i>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>The Complete Full – Stack Web Development Bootcamp</h3>
+
+                    <p class="certificate-institution">
+                    UDEMY
+                    </p>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Certificate 4 -->
+            <div class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img src="images/cert4.jpg"
+                         alt="Certificate">
+
+                    <div class="certificate-overlay">
+
+                        <a href="images/cert4.jpg"
+                           target="_blank"
+                           class="certificate-btn">
+                            <i class="fa-solid fa-eye"></i>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>100 Days of Code.The complete Python Pro Bootcamp</h3>
+
+                    <p class="certificate-institution">
+                      UDEMY
+                    </p>
+
+                    <span class="certificate-year">
+                        2024
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- ========================= -->
     <!-- CONTACT -->
@@ -1285,9 +1621,9 @@ FOOTER
 
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
 
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
 
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <!-- <a href="#"><i class="fab fa-github"></i></a> -->
 
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
 
@@ -1342,7 +1678,7 @@ FOOTER
 
             <p>
 
-                © 2026 All Rights Reserved.
+                © 2026 All Rights Reserved. Powered By Yiw Nexus
 
             </p>
 
